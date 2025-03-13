@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Aseo para Hombres</title>
+    <style>
+        /* Estilos CSS básicos */
+        /* Puedes personalizar estos estilos según tu gusto */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #74280a;
+        }
+
+        /* Estilos del menú de navegación */
+        nav {
+            background-color: #f0a573;
+            /* Color de fondo del menú */
+            padding: 10px 0;
+            /* Espaciado interno */
+            width: 26.8cm;
+            /* Ancho completo */
+            text-align: center;
+            /* Alinear el texto al centro */
+            margin-top: 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            /* Elimina los marcadores de lista */
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            /* Muestra los elementos de lista en línea */
+            margin-right: 45px;
+            /* Espaciado entre elementos */
+        }
+
+        nav ul li a {
+            color: #333;
+            /* Color del texto del enlace */
+            text-decoration: none;
+            /* Elimina el subrayado del enlace */
+            font-size: 18px;
+            /* Tamaño de fuente */
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+            /* Cambia el color del texto al pasar el ratón */
+        }
+
+        /* Estilos de los productos */
+        #productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .producto {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            width: 300px;
+            background-color: #f0a573;
+        }
+
+        .producto img {
+            max-width: 50%;
+            height: auto;
+            margin: 0 auto;
+            /* Esto centra la imagen horizontalmente */
+            display: block;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .producto h2 {
+            font-size: 24px;
+            /* Tamaño de fuente para los títulos */
+            color: #333;
+            /* Color del texto */
+            margin-bottom: 5px;
+            /* Espaciado inferior */
+            font-family: 'NombreDeTuFuente', cursive;
+            /* Cambia 'NombreDeTuFuente' por el nombre de la fuente que deseas usar */
+        }
+
+        .left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            /* esto hace que la imagen esté por encima de todo */
+            max-width: 10%;
+        }
+    </style>
+    <!-- Agregar la fuente -->
+    <style>
+        @font-face {
+            font-family: 'NombreDeTuFuente';
+            src: url('ruta/a/tu/fuente.ttf') format('truetype');
+            /* Cambia 'ruta/a/tu/fuente.ttf' por la ruta de la fuente que deseas usar */
+        }
+    </style>
+</head>
+
+<body>
+    <img src="Imagenes/Logo.png" class="left">
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#kits">Kits</a></li>
+            <li><a href="Index.html">Módulo Hombres</a></li>
+        </ul>
+    </nav>
+    <h2 style="font-size: 1cm; color: #f7bb93;">Modulo de Aseo para Hombres</h2>
+    <div id="productos">
+        <div class="producto">
+            <h2>Shampoo Anticaspa</h2>
+            <img src="Imagenes/Shampoo Anticaspa.jpg" alt="Shampoo Anticaspa" class="imagen">
+            <p style="line-height: 1.6; font-weight: bold">Este shampoo está diseñado para hombres que buscan una
+                solución efectiva contra
+                la caspa. Sus
+                ingredientes clave ayudan a mantener el cuero cabelludo libre de escamas.</p>
+            <p style="font-size: 20px;">Precio: $20.000</p>
+            <button onclick="agregarAlCarrito('Shampoo Anticaspa', 20.000)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <h2>Bálsamo</h2>
+            <img src="Imagenes/Bálsamo.jpg" alt="Bálsamo">
+            <p style="font-weight: bold">Refrescante y revitalizante, nuestro bálsamo para hombres es el compañero
+                perfecto para el cuidado
+                diario de la piel masculina dejándola suave, tersa y con una sensación de frescura duradera.</p>
+            <p style="font-size: 20px; line-height: 2.6">Precio: $15.000</p>
+            <button onclick="agregarAlCarrito('Bálsamo', 15.000)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <h2>Jabón Corporal</h2>
+            <img src="Imagenes/Gel de Ducha o Jabón Corporal.jpg" alt="Jabón Corporal">
+            <p style="line-height: 1.6; font-weight: bold">Este gel de ducha especialmente diseñado para hombres combina
+                una fragancia
+                fresca y
+                vigorizante con una fórmula suave que limpia y revitaliza la piel.</p>
+            <p style="font-size: 20px; line-height: 2.4">Precio: $50.000</p>
+            <button onclick="agregarAlCarrito('Jabón Corporal', 50.000)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <h2>Shampoo Anticaida</h2>
+            <img src="Imagenes/Shampoo Anticaida.jpg" alt="Shampoo Anticaida">
+            <p style="font-weight: bold">Experimenta la solución definitiva para la pérdida de cabello con nuestro
+                shampoo anticaída enriquecido
+                con potentes extractos naturales. Diseñado para hombres y mujeres preocupados por la pérdida de cabello
+            </p>
+            <p style="line-height: 3.5; font-size: 20px;">Precio: $40.000</p>
+            <button onclick="agregarAlCarrito('Shampoo Anticaida', 40.000)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <h2>Pomada para peinar</h2>
+            <img src="Imagenes/Pomada para peinar.jpg" alt="Pomada para peinar">
+            <p style="font-weight: bold">Nuestra pomada proporciona una fijación flexible y esculpir tu cabello según
+                tus
+                preferencias. Desde estilos clásicos hasta looks modernos y desenfadados, sin importar la ocasión.</p>
+            <p style="line-height: 3.4; font-size: 20px;">Precio: $80.000</p>
+            <button onclick="agregarAlCarrito('Pomada para peinar', 80.000)">Agregar al
+                carrito</button>
+        </div>
+        <div class="producto">
+            <h2>Crema hidratante corporal</h2>
+            <img src="Imagenes/Crema hidratante corporal.jpg" alt="Crema hidratante corporal">
+            <p style="font-weight: bold">Utiliza nuestra crema hidratante corporal como parte de tu rutina diaria de
+                cuidado de la piel para
+                protegerla de los efectos dañinos del medio ambiente.</p>
+            <p style="line-height: 2.8; font-size: 20px;">Precio: $100.000</p>
+            <button onclick="agregarAlCarrito('Crema hidratante corporal', 100.000)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <h2>Loción</h2>
+            <img src="Imagenes/Loción para hombres.jpg" alt="Loción para hombres">
+            <p style="font-weight: bold">Nuestra loción está diseñada específicamente para las necesidades de la piel
+                masculina, ofreciendo una
+                hidratación intensa y revitalizante que deja la piel suave, fresca y rejuvenecida.</p>
+            <p style="font-size: 20px;">Precio: $120.000</p>
+            <button onclick="agregarAlCarrito('Loción para hombres', 120.000)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <h2>Desodorante</h2>
+            <img src="Imagenes/Desodorante para hombres.jpg" alt="Desodorante">
+            <p style="font-weight: bold">Nuestro desodorante antitranspirante proporciona una protección duradera contra
+                el olor y la humedad,
+                manteniéndote fresco y seguro durante todo el día.</p>
+            <p style="font-size: 20px; line-height: 2.2">Precio: $40.000</p>
+            <button onclick="agregarAlCarrito('Desodorante', 40.000)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <h2>Maquina de afeitar</h2>
+            <img src="Imagenes/Maquina de afeitar.jpg" alt="Maquina de afeitar">
+            <p style="font-weight: bold">Simplifica tu rutina de cuidado personal con nuestra máquina de afeitar
+                eléctrica todo en uno, diseñada
+                para ofrecerte un afeitado suave, preciso y sin complicaciones.</p>
+            <p style="font-size: 20px; line-height: 2">Precio: $190.000</p>
+            <button onclick="agregarAlCarrito('Maquina de afeitar', 190.000)">Agregar al carrito</button>
+        </div>
+    </div>
+    <h1>Carrito de Compra</h1>
+    <div id="carrito">
+        <p id="carrito-vacio">El carrito está vacío.</p>
+        <ul id="lista-carrito">
+        </ul>
+        <p id="total">Total: $<span id="total-precio">0</span></p>
+    </div>
+    <div id="formulario-domicilio" style="display: none;">
+        <h2>Ingresa tu información de domicilio</h2>
+        <form onsubmit="confirmarCompra(event)">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required><br><br>
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" required><br><br>
+            <label for="metodo-pago">Método de Pago:</label>
+            <select id="metodo-pago" name="metodo-pago" required>
+                <option value="">Seleccione un método de pago</option>
+                <option value="tarjeta-credito">Tarjeta de Crédito</option>
+                <option value="tarjeta-debito">Tarjeta de Débito</option>
+                <option value="transferencia">Transferencia Bancaria</option>
+            </select><br><br>
+            <label for="numero-cuenta">Número de Cuenta:</label>
+            <input type="text" id="numero-cuenta" name="numero-cuenta"><br><br>
+            <button type="submit">Confirmar Compra</button>
+        </form>
+    </div>
+
+    <button id="boton-finalizar" style="display: none;" onclick="finalizarCompra()">Finalizar Compra</button>
+
+    <script>
+        let carrito = [];
+
+        function agregarAlCarrito(nombre, precio) {
+            const producto = { nombre, precio };
+            carrito.push(producto);
+            mostrarCarrito();
+        }
+
+        function eliminarProducto(index) {
+            carrito.splice(index, 1);
+            mostrarCarrito();
+        }
+
+        function mostrarCarrito() {
+            const listaCarrito = document.getElementById('lista-carrito');
+            listaCarrito.innerHTML = '';
+
+            let total = 0;
+            carrito.forEach((producto, index) => {
+                const li = document.createElement('li');
+                const precioCompleto = (producto.precio * 1000).toFixed(0);
+                li.textContent = `${producto.nombre} $${precioCompleto} `;
+                const botonEliminar = document.createElement('button');
+                botonEliminar.textContent = 'Eliminar';
+                botonEliminar.onclick = () => eliminarProducto(index);
+                li.appendChild(botonEliminar);
+                listaCarrito.appendChild(li);
+                total += producto.precio;
+            });
+
+            const totalPrecio = document.getElementById('total-precio');
+            const totalCompleto = (total * 1000).toFixed(0);
+            totalPrecio.textContent = totalCompleto;
+
+            const carritoVacio = document.getElementById('carrito-vacio');
+            if (carrito.length === 0) {
+                carritoVacio.style.display = 'block';
+            } else {
+                carritoVacio.style.display = 'none';
+            }
+            // Mostrar el botón "Finalizar Compra" si hay elementos en el carrito
+            const botonFinalizar = document.getElementById('boton-finalizar');
+            if (carrito.length > 0) {
+                botonFinalizar.style.display = 'block';
+            } else {
+                botonFinalizar.style.display = 'none';
+            }
+        }
+
+        function finalizarCompra() {
+            const carritoDiv = document.getElementById('carrito');
+            carritoDiv.style.display = 'none';
+
+            const formularioDiv = document.getElementById('formulario-domicilio');
+            formularioDiv.style.display = 'block';
+        }
+        function confirmarCompra(event) {
+            event.preventDefault(); // Prevenir el envío del formulario por defecto
+            alert('Compra finalizada y en camino');
+            window.location.reload(); // Restablecer la página
+        }
+    </script>
+
+</body>
+
+</html>
